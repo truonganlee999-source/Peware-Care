@@ -10,7 +10,7 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('scrolled');
         // Nếu menu đang không mở, icon màu tối
         if (!navLinks.classList.contains('active')) {
-            hamburgerIcon.style.color = "var(--text-dark)";
+            hamburgerIcon.style.color = "var(--white)";
         }
     } else {
         navbar.classList.remove('scrolled');
@@ -227,4 +227,5 @@ filterBtns.forEach(btn => {
         const filterValue = e.target.getAttribute('data-filter');
         renderMap(filterValue);
     });
+
 });
