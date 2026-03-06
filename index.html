@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peware Care | Activate impact. Inspire change.</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2245%22%20fill%3D%22%234FC3F7%22/%3E%3Cpath%20d%3D%22M25%2045%20Q35%2030%2050%2040%20T75%2035%20L70%2055%20Q55%2060%2040%2055%20Z%22%20fill%3D%22%232E7D32%22/%3E%3Cpath%20d%3D%22M30%2065%20Q45%2055%2060%2065%20T75%2070%20L65%2080%20Q50%2075%2035%2078%20Z%22%20fill%3D%22%23388E3C%22/%3E%3C/svg%3E">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet Map CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/peware-logo.svg" alt="Peware Logo"> 
+            </a>
+            <ul class="nav-links">
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#impact">Impact</a></li>
+                <li><a href="#map-section">Projects</a></li>
+                <li><a href="#partners">Partners</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars" style="color: var(--white)"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <header class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="https://res.cloudinary.com/dyqoblvoq/video/upload/v1772076963/ecolife_v3r1op.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content reveal">
+            <h3 class="subtitle">Peware Care</h3>
+            <h1 class="headline">Activate impact.<br>Inspire change.</h1>
+            <p class="subheadline">Every purchase is a hand helping restore Vietnam's marine ecosystems.</p>
+            <div class="hero-buttons">
+                <a href="#impact" class="btn btn-primary">Explore Our Impact</a>
+                <a href="#join" class="btn btn-secondary">Join The Movement</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 2: Our Story -->
+    <section class="story padding-section" id="story">
+        <div class="container grid-2">
+            <div class="story-img reveal fade-left">
+                <img src="https://images.unsplash.com/photo-1751646312130-d6be98d867bf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ocean Cleanup">
+            </div>
+            <div class="story-text reveal fade-right">
+                <h2 class="section-title">Our Commitment to the Ocean</h2>
+                <p>Peware Care was created with a simple belief: businesses should give back to the environment that supports them.</p>
+                <p>Vietnam’s oceans and rivers are among the most valuable ecosystems in the world, yet they face increasing threats from plastic pollution and waste.</p>
+                <p>To contribute to meaningful change, <strong>Peware commits 1% of its profits</strong> to environmental initiatives focused on protecting marine and river ecosystems.</p>
+                <p>Through environmental partnerships, recycling programs, and community action, every Peware purchase supports real change.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Impact Stats -->
+    <section class="stats" id="impact">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Our Impact So Far</h2>
+            <div class="grid-4 mt-4">
+                <div class="stat-box reveal">
+                    <i class="fas fa-map-marked-alt stat-icon"></i>
+                    <h3 class="counter" data-target="5">0</h3>
+                    <p>Provinces & Cities</p>
+                </div>
+                <div class="stat-box reveal" data-delay="100">
+                    <i class="fas fa-users stat-icon"></i>
+                    <h3 class="counter" data-target="120689">0</h3>
+                    <p>Customers Supporting</p>
+                </div>
+                <div class="stat-box reveal" data-delay="200">
+                    <i class="fas fa-handshake stat-icon"></i>
+                    <h3 class="counter" data-target="200">0</h3>
+                    <p>Partners & Networks</p>
+                </div>
+                <div class="stat-box reveal" data-delay="300">
+                    <i class="fas fa-recycle stat-icon"></i>
+                    <h3><span class="counter" data-target="60300">0</span> kg</h3>
+                    <p>Waste Collected & Recycled</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Interactive Map -->
+    <section class="map-section padding-section" id="map-section">
+        <div class="container text-center reveal">
+            <h2 class="section-title">Our Projects Across Vietnam</h2>
+            <p class="map-desc">Peware Care works with communities across Vietnam to protect rivers, coastlines, and marine ecosystems. Click on the markers to see our impact.</p>
+            
+            <div class="map-filters mt-3">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ocean">Ocean Cleanup</button>
+                <button class="filter-btn" data-filter="river">River Protection</button>
+                <button class="filter-btn" data-filter="recycling">Recycling</button>
+            </div>
+
+            <div id="vietnam-map" class="mt-4"></div>
+        </div>
+    </section>
+
+    <!-- Section 5: What We Do -->
+    <section class="what-we-do padding-section bg-light" id="actions">
+        <div class="container text-center">
+            <h2 class="section-title reveal">Turning Support Into Action</h2>
+            <div class="grid-4 mt-4">
+                <div class="action-card reveal">
+                    <div class="icon-circle"><i class="fas fa-water"></i></div>
+                    <h3>Ocean Cleanup</h3>
+                    <p>Organizing coastal cleanup campaigns to remove plastic waste from beaches and marine ecosystems.</p>
+                </div>
+                <div class="action-card reveal" data-delay="100">
+                    <div class="icon-circle"><i class="fas fa-leaf"></i></div>
+                    <h3>River Protection</h3>
+                    <p>Supporting river cleanup and pollution monitoring programs across major waterways.</p>
+                </div>
+                <div class="action-card reveal" data-delay="200">
+                    <div class="icon-circle"><i class="fas fa-recycle"></i></div>
+                    <h3>Recycling Programs</h3>
+                    <p>Collected waste is sorted, documented, and sent to certified recycling partners.</p>
+                </div>
+                <div class="action-card reveal" data-delay="300">
+                    <div class="icon-circle"><i class="fas fa-book-open"></i></div>
+                    <h3>Environmental Ed</h3>
+                    <p>Working with communities to promote sustainable habits and reduce plastic waste.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Partners -->
+    <section class="partners padding-section" id="partners">
+        <div class="container text-center reveal">
+            <h2 class="section-title">Working Together for a Cleaner Future</h2>
+            <p class="w-75 mx-auto">Protecting the environment requires collaboration. Peware Care works with environmental organizations, recycling companies, volunteer groups, and community networks. Together, we are building a stronger ecosystem for environmental protection.</p>
+            
+            <div class="partner-logos mt-4">
+                <!-- Placeholder for logos -->
+                <i class="fab fa-envira"></i>
+                <i class="fas fa-globe-asia"></i>
+                <i class="fas fa-seedling"></i>
+                <i class="fas fa-hands-helping"></i>
+                <i class="fas fa-fish"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Transparency -->
+    <section class="transparency padding-section bg-light" id="transparency">
+        <div class="container grid-2">
+            <div class="transparency-text reveal fade-left">
+                <h2 class="section-title">Transparency Matters</h2>
+                <p>Peware Care believes environmental impact must be measurable and transparent. We track and document:</p>
+                <ul class="check-list mt-2">
+                    <li><i class="fas fa-check-circle"></i> Waste collected & sorted</li>
+                    <li><i class="fas fa-check-circle"></i> Project locations mapped</li>
+                    <li><i class="fas fa-check-circle"></i> Partner organizations</li>
+                    <li><i class="fas fa-check-circle"></i> Community participation rates</li>
+                    <li><i class="fas fa-check-circle"></i> Environmental impact progress</li>
+                </ul>
+                <p class="mt-2">Regular impact updates ensure that every contribution leads to real and visible change.</p>
+                <!-- <a href="#" class="btn btn-outline mt-3">View Impact Reports</a> -->
+            </div>
+            <div class="transparency-img reveal fade-right">
+                <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1000&auto=format&fit=crop" alt="Transparency Report">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Join -->
+    <section class="join" id="join">
+        <div class="overlay"></div>
+        <div class="container text-center reveal relative z-10">
+            <h2 class="headline text-white">Your Purchase Creates Real Impact</h2>
+            <p class="text-white mt-2 w-75 mx-auto">Every Peware product contributes to environmental action. By choosing Peware, you help fund cleanup programs, support recycling initiatives, and protect marine ecosystems.</p>
+            <p class="text-white mt-2 font-bold">Together we can create a cleaner future for Vietnam’s oceans.</p>
+            <!-- <div class="hero-buttons mt-4">
+                <a href="#" class="btn btn-primary">Shop with Purpose</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container grid-2">
+            <div class="footer-quote">
+                <a href="#" class="logo">
+                    <img src="images/peware-logo.svg" alt="Peware Logo"  style="margin-bottom: 10px;"> 
+                </a>
+                <p><i>"Protecting the ocean begins with everyday choices."</i></p>
+                <p class="mt-1">— Peware Care</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Impact Reports</a></li>
+                    <li><a href="#">Environmental Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright text-center">
+            <p>&copy; 2026 Peware Care. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
